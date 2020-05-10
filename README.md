@@ -1,6 +1,6 @@
 # Image optimization bash script
 
-![img-optimize](https://raw.githubusercontent.com/MrGKanev/img-optimizer/master/images/img-optimize.png)
+![img-optimize](https://raw.githubusercontent.com/MrGKanev/img-optimizer/master/images/img-optimizer.png)
 
 ![GitHub](https://img.shields.io/github/license/mrgkanev/img-optimizer.svg) ![GitHub release](https://img.shields.io/github/release/mrgkanev/img-optimizer.svg) ![GitHub last commit](https://img.shields.io/github/last-commit/mrgkanev/img-optimizer.svg) ![Github stars](https://img.shields.io/github/stars/mrgkanev/img-optimizer.svg)
 
