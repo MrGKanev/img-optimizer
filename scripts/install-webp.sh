@@ -1,12 +1,4 @@
 #!/usr/bin/env bash
-#----------------------------------------------------------------------------
-#  img-optimize-  libwebp compilation script
-#----------------------------------------------------------------------------
-# Website:       https://virtubox.net
-# GitHub:        https://github.com/mrgkanev/img-optimizer
-# Author:        VirtuBox
-# License:       M.I.T
-# ----------------------------------------------------------------------------
 
 # install prerequisites
 export DEBIAN_FRONTEND=noninteractive
