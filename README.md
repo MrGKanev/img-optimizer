@@ -24,18 +24,6 @@ Centos 7 :
 sudo yum install optipng jpegoptim libwebp-tools -y
 ```
 
-### Compile the latest release (optipng & libwebp)
-
-For Debian/Ubuntu (available in scripts folder) :
-
-```bash
-# optipng
-curl -sL git.io/fjddn | sudo -E bash
-
-# libwebp
-curl -sL git.io/fjdd6 | sudo -E bash
-```
-
 --------------------------------------------------------------------------------
 
 ## Installation
