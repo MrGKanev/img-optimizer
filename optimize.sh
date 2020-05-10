@@ -195,10 +195,10 @@ if [ "$WEBP_OPTIMIZATION" = "y" ]; then
     cd "$IMG_PATH" || exit 1
     if [ -n "$FIND_ARGS" ]; then
         find . -type f -iname "*.png" -cmin "$FIND_ARGS" -print0 | xargs -0 -r -I {} \
-            bash -c '[ ! -f "{}.webp" ] && { cwebp -z 9 -mt -quiet "{}" -o "{}.webp"; }'
+            bash -c '[ ! -f "{}.webp" ] && { cwebp -q 9 -mt -quiet "{}" -o "{}.webp"; }'
     else
         find . -type f -iname "*.png" -print0 | xargs -0 -r -I {} \
-            bash -c '[ ! -f "{}.webp" ] && { cwebp -z 9 -mt -quiet "{}" -o "{}.webp"; }'
+            bash -c '[ ! -f "{}.webp" ] && { cwebp -q 9 -mt -quiet "{}" -o "{}.webp"; }'
     fi
     echo -ne "       png to webp conversion                [${CGREEN}OK${CEND}]\\r"
     echo -ne '\n'
