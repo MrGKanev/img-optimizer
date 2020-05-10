@@ -1,0 +1,30 @@
+sudo: required
+dist: bionic
+
+language: bash
+
+cache:
+  apt: true
+
+git:
+  quiet: true
+
+before_script:
+  - sudo apt-get -qq autoremove --purge
+addons:
+  apt:
+    update: true
+
+script:
+  - sudo apt-get install jpegoptim -y
+  - sudo bash scripts/install-webp.sh
+  - sudo bash scripts/install-optipng.sh
+  - sudo cp optimize.sh /usr/local/bin/img-optimize
+  - sudo chmod 755 /usr/local/bin/img-optimize
+  - /usr/local/bin/img-optimize --all
+  - /usr/local/bin/img-optimize -jpg -q
+  - /usr/local/bin/img-optimize --png -q
+  - rm images/*.webp
+  - /usr/local/bin/img-optimize --webp
+  - rm images/*.webp
+  - /usr/local/bin/img-optimize --webp --quiet
