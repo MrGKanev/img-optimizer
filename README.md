@@ -6,9 +6,9 @@
 
 ## Prerequisite
 
-- jpegoptim for jpg optimization
-- optipng for png optimization
-- cwebp for WebP conversion
+- [jpegoptim](https://github.com/tjko/jpegoptim) for jpg optimization
+- [optipng](http://optipng.sourceforge.net/) for png optimization
+- [cwebp](https://developers.google.com/speed/webp/docs/cwebp) for WebP conversion
 
 ### From APT repositories
 

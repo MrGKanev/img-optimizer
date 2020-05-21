@@ -96,6 +96,7 @@ fi
 ##################################
 # Prevent multi execution on same directory
 ##################################
+
 lock=$(echo -n "$IMG_PATH" | md5sum| cut -d" " -f1)
 
 if [ -f "/tmp/$lock" ]; then
@@ -152,6 +153,7 @@ fi
 ##################################
 
 # optimize jpg
+
 if [ "$JPG_OPTIMIZATION" = "y" ]; then
     [ -z "$(command -v jpegoptim)" ] && {
         echo "Error: jpegoptim isn't installed"
@@ -173,6 +175,7 @@ if [ "$PNG_OPTIMIZATION" = "y" ]; then
         echo "Error: optipng isn't installed"
         exit 1
     }
+
     # optimize png
 
     echo -ne '       png optimization                      [..]\r'
@@ -191,6 +194,7 @@ if [ "$WEBP_OPTIMIZATION" = "y" ]; then
         exit 1
     }
     # convert png to webp
+
     echo -ne '       png to webp conversion                [..]\r'
     cd "$IMG_PATH" || exit 1
     if [ -n "$FIND_ARGS" ]; then
@@ -204,6 +208,7 @@ if [ "$WEBP_OPTIMIZATION" = "y" ]; then
     echo -ne '\n'
 
     # convert jpg to webp
+
     echo -ne '       jpg to webp conversion                [..]\r'
     cd "$IMG_PATH" || exit 1
     if [ -n "$FIND_ARGS" ]; then
@@ -219,6 +224,7 @@ if [ "$WEBP_OPTIMIZATION" = "y" ]; then
 fi
 
 # We're done !
+
 echo ""
 echo -e "       ${CGREEN}Image optimization performed successfully !${CEND}"
 echo ""

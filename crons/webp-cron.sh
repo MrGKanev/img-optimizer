@@ -1,9 +1,5 @@
 #!/bin/bash
 
-## cronjob to convert PNG/JPG images to WebP
-## images path are listed in sites.csv
-## written by VirtuBox (https://virtubox.net)
-
 sites="/var/www/yoursite.tld/images \
        /var/www/yourothersite.tld/content/images \
        /var/www/yourthirdsite.tld/wp-content/uploads"
